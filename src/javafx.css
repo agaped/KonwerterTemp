@@ -1,0 +1,16 @@
+.gridPane{
+	-fx-background-color :linear-gradient(#0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}	
+.one{
+	-fx-text-fill: white;
+}
+.two{
+	-fx-font-weight: bold;
+}
+.radio{
+  -fx-mark-highlight-color: #2cb5e8 ;
+  -fx-mark-color: #2cb5e8 ;
+}
+.warning{
+	-fx-text-fill: #B40000;
+}

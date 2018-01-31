@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="outputKelvin" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="gridPane" stylesheets="@../javafx.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="60.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="123.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="131.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="90.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="131.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="65.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="input" onAction="#pobierzTemp" GridPane.columnIndex="3" />
+      <RadioButton fx:id="inputC" mnemonicParsing="false" onAction="#pobierzTemp" selected="true" text="Celcius" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <toggleGroup>
+            <ToggleGroup fx:id="Grupa1" />
+         </toggleGroup>
+         <styleClass>
+            <String fx:value="one" />
+            <String fx:value="radio" />
+            <String fx:value="newradio" />
+         </styleClass></RadioButton>
+      <RadioButton fx:id="inputF" mnemonicParsing="false" onAction="#pobierzTemp" text="Fahrenheit" toggleGroup="$Grupa1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <styleClass>
+            <String fx:value="one" />
+            <String fx:value="radio" />
+            <String fx:value="newradio" />
+         </styleClass></RadioButton>
+      <RadioButton fx:id="inputK" mnemonicParsing="false" onAction="#pobierzTemp" text="Kelvin" toggleGroup="$Grupa1" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <styleClass>
+            <String fx:value="one" />
+            <String fx:value="radio" />
+            <String fx:value="newradio" />
+         </styleClass></RadioButton>
+      <RadioButton fx:id="outputC" mnemonicParsing="false" onAction="#pobierzTemp" text="Celcius" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <toggleGroup>
+            <ToggleGroup fx:id="Grupa2" />
+         </toggleGroup>
+         <styleClass>
+            <String fx:value="one" />
+            <String fx:value="radio" />
+            <String fx:value="newradio" />
+         </styleClass></RadioButton>
+      <RadioButton fx:id="outputF" mnemonicParsing="false" onAction="#pobierzTemp" selected="true" text="Fahrenheit" toggleGroup="$Grupa2" GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <styleClass>
+            <String fx:value="one" />
+            <String fx:value="radio" />
+            <String fx:value="newradio" />
+         </styleClass></RadioButton>
+      <RadioButton fx:id="outputK" mnemonicParsing="false" onAction="#pobierzTemp" text="Kelvin" toggleGroup="$Grupa2" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <styleClass>
+            <String fx:value="one" />
+            <String fx:value="radio" />
+            <String fx:value="newradio" />
+         </styleClass></RadioButton>
+      <Label contentDisplay="RIGHT" prefHeight="36.0" prefWidth="132.0" styleClass="one, two" text="Input" textAlignment="RIGHT" GridPane.columnIndex="2" />
+      <Label fx:id="output" prefHeight="67.0" prefWidth="100.0" text="Output" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
+         <styleClass>
+            <String fx:value="one" />
+            <String fx:value="two" />
+         </styleClass></Label>
+      <Label prefHeight="35.0" prefWidth="136.0" text="Input Scale" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <styleClass>
+            <String fx:value="one" />
+            <String fx:value="two" />
+         </styleClass></Label>
+      <Label prefHeight="33.0" prefWidth="142.0" text="Output Scale" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <styleClass>
+            <String fx:value="one" />
+            <String fx:value="two" />
+         </styleClass></Label>
+      <Label fx:id="errOutput" prefHeight="70.0" prefWidth="100.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <styleClass>
+            <String fx:value="one" />
+            <String fx:value="warning" />
+         </styleClass></Label>
+   </children>
+</GridPane>
