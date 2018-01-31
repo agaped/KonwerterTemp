@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -30,7 +29,7 @@ public class Controller {
 
     Przelicznik przelicznik = new Przelicznik();
 
-    public void pobierzTemp(ActionEvent actionEvent) {
+    public void pobierzTemp() {
         double temp;
         try {
             temp = Double.parseDouble(input.getText());

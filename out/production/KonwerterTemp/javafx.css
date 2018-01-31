@@ -10,8 +10,9 @@
 .radio{
   -fx-mark-highlight-color: #2cb5e8 ;
   -fx-mark-color: #2cb5e8 ;
-  -fx-background-color: red;
 }
 .warning{
-	-fx-text-fill: #B40000;
+	-fx-text-fill: #E90000;
+	-fx-font-weight: bold;
+	-fx-text-align: center;
 }

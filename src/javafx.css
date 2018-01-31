@@ -12,5 +12,6 @@
   -fx-mark-color: #2cb5e8 ;
 }
 .warning{
-	-fx-text-fill: #B40000;
+	-fx-text-fill: #E90000;
+	-fx-font-weight: bold;
 }
