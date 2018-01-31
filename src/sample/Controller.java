@@ -28,48 +28,31 @@ public class Controller {
 
 
     Przelicznik przelicznik = new Przelicznik();
-
+    
     public void pobierzTemp() {
         double temp;
         try {
             temp = Double.parseDouble(input.getText());
             errOutput.setVisible(false);
             output.setVisible(true);
-            if (!inputC.isSelected() || !outputF.isSelected()) {
-                if (inputC.isSelected() && outputK.isSelected()) {
-                    temp = przelicznik.przeliczCK(temp);
-                    output.setText(String.format("%.2f", temp));
-                } else if (inputC.isSelected() && outputC.isSelected()) {
-                    temp = przelicznik.przeliczCC(temp);
-                    output.setText(String.format("%.2f", temp));
-                } else if (inputF.isSelected() && outputC.isSelected()) {
-                    temp = przelicznik.przeliczFC(temp);
-                    output.setText(String.format("%.2f", temp));
-                } else if (inputF.isSelected() && outputK.isSelected()) {
-                    temp = przelicznik.przeliczFK(temp);
-                    output.setText(String.format("%.2f", temp));
-                } else if (inputF.isSelected() && outputF.isSelected()) {
-                    temp = przelicznik.przeliczFF(temp);
-                    output.setText(String.format("%.2f", temp));
-                } else if (inputK.isSelected() && outputC.isSelected()) {
-                    temp = przelicznik.przeliczKC(temp);
-                    output.setText(String.format("%.2f", temp));
-                } else if (inputK.isSelected() && outputF.isSelected()) {
-                    temp = przelicznik.przeliczKF(temp);
-                    output.setText(String.format("%.2f", temp));
-                } else
-                    //inputK.isSelected()&&outputK.isSelected()){
-                    temp = przelicznik.przeliczKK(temp);
-            } else {
-                temp = przelicznik.przeliczCF(temp);
+            if(inputF.isSelected()){
+                temp=przelicznik.przeliczFC(temp);
+            }else if(inputK.isSelected()){
+                temp=przelicznik.przeliczKC(temp);
+            }
+            if(outputF.isSelected()){
+                temp=przelicznik.przeliczCF(temp);
+                output.setText(String.format("%.2f", temp));
+            }else if(outputK.isSelected()){
+                temp=przelicznik.przeliczCK(temp);
+                output.setText(String.format("%.2f", temp));
+            }else{
                 output.setText(String.format("%.2f", temp));
             }
-            output.setText(String.format("%.2f", temp));
         } catch (NumberFormatException e) {
             errOutput.setVisible(true);
             errOutput.setText("To nie jest format liczbowy !");
             output.setVisible(false);
         }
     }
-
 }
