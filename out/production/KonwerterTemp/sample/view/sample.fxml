@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="outputKelvin" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="gridPane" stylesheets="@../javafx.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane fx:id="outputKelvin" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="gridPane" stylesheets="@javafx.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="60.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="123.0" />
@@ -70,7 +70,7 @@
             <String fx:value="radio" />
             <String fx:value="newradio" />
          </styleClass></RadioButton>
-      <Label contentDisplay="RIGHT" prefHeight="36.0" prefWidth="132.0" styleClass="one, two" text="Input" textAlignment="RIGHT" GridPane.columnIndex="2" />
+      <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="36.0" prefWidth="132.0" styleClass="one, two" text="Input" textAlignment="RIGHT" GridPane.columnIndex="2" />
       <Label fx:id="output" prefHeight="67.0" prefWidth="100.0" text="Output" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
          <styleClass>
             <String fx:value="one" />
@@ -86,7 +86,7 @@
             <String fx:value="one" />
             <String fx:value="two" />
          </styleClass></Label>
-      <Label fx:id="errOutput" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="123.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+      <Label fx:id="errOutput" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="66.0" prefWidth="123.0" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
          <styleClass>
             <String fx:value="one" />
             <String fx:value="warning" />

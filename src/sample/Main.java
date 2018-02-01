@@ -12,11 +12,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/sample.fxml"));
         primaryStage.setTitle("Konwerter temperatur");
         Scene scene=new Scene(root, 500, 300);
         primaryStage.setScene(scene);
-        File f = new File("src/javafx.css");
+        File f = new File("src/sample/view/javafx.css");
         scene.getStylesheets().add("file:///" + f.getAbsolutePath().replace("\\", "/"));
         primaryStage.show();
     }

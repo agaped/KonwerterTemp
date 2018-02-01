@@ -1,4 +1,4 @@
-package sample;
+package sample.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -28,7 +28,7 @@ public class Controller {
 
 
     Przelicznik przelicznik = new Przelicznik();
-    
+
     public void pobierzTemp() {
         double temp;
         try {
